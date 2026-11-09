@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindAnchor Blog</title>
+<link rel="stylesheet" href="static.css">
+<link rel="icon" type="image/png" href="icons/favicon-32.png">
+</head>
+<body>
+<header class="bar"><b>⚓ MindAnchor</b><a href="index.html">Open the app</a><a href="guide.html">User guide</a><a href="evidence.html">Evidence &amp; safety</a><a class="on" href="blog.html">Blog</a></header>
+<main>
+<p class="meta">Blog · November 2026 · MindAnchor project team</p>
+<h1>Building MindAnchor: a calm, private companion for students</h1>
+<p class="lead">Student life now happens on a phone, and so do many of the things that make it harder: endless scrolling, lost sleep, work we keep avoiding, and nobody to talk to at 2 a.m. We built a prototype that tries to help with all of that without watching or judging anyone.</p>
+
+<h2>The problem is not just screen time</h2>
+<p>When we looked at how students struggle, screen time turned out to be one symptom among several that feed each other. Late-night scrolling cuts into sleep. Tired students avoid hard assignments. Avoidance brings stress, and stress sends people back to the scroll. Underneath sits isolation: many students do not ask for help because they fear being judged.</p>
+<p>So MindAnchor targets five connected problems: digital overuse, sleep loss, academic avoidance, stress and acute distress.</p>
+
+<h2>What MindAnchor does</h2>
+<ul>
+  <li><b>Overnight lockout</b> that rests the app at night, while emergency numbers still get through.</li>
+  <li><b>Time caps you set while calm.</b> You choose the apps, and a cap can be lowered but not raised that day. Before a scroll, a 20-second pause lets you decide again.</li>
+  <li><b>Task slicer and focus sprints</b> that turn "Build CS Project" into four 15-minute steps.</li>
+  <li><b>A calm corner</b> with ambient sound, Punjabi rhythms, your own songs or Spotify, plus breathing and grounding exercises.</li>
+  <li><b>Get Real Help</b>, one tap from every screen, with Pakistan helplines first.</li>
+</ul>
+
+<h2>Safety was a design rule, not an extra</h2>
+<p>A wellbeing app that collects data about students can cause harm of its own, so we set four rules. Nothing identifiable is stored without consent, and mood check-ins are saved only if you say yes. Nobody monitors you, so there is no parent or staff dashboard and no server. Nothing shames you: there are no streaks or red warnings, only "time saved" and small wins. And a real person is always one tap away, with a Quick Exit button for privacy.</p>
+
+<h2>What the research says, and what it doesn't</h2>
+<p>We tried to tie each feature to evidence and to be straight about how strong it is. A large review found screen time linked to worse sleep in about 90% of studies, but those are associations, not proof of cause (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4437561">Hale &amp; Guan, 2015</a>). A meta-analysis found that music interventions reduce stress (<a href="https://pubmed.ncbi.nlm.nih.gov/31167611/">de Witte et al., 2020</a>), and one trial found that five minutes of structured breathing improved mood more than mindfulness meditation (<a href="https://pubmed.ncbi.nlm.nih.gov/36630953/">Balban et al., 2023</a>). Planning exactly when and what you will do helps people follow through, though later work suggests the effect is smaller than first reported. Our full table is on the <a href="evidence.html">evidence page</a>.</p>
+<p>One finding changed our design: Nielsen Norman Group reports that app tutorials often do not improve performance. So our walkthrough is only about 20 seconds, skippable, and the app is meant to be understandable without it.</p>
+
+<h2>What we got wrong, or can't do yet</h2>
+<ul>
+  <li>A web page cannot see or block other apps, so caps and lockout work inside MindAnchor as a commitment you log against. Real enforcement needs a native Android app.</li>
+  <li>Accounts live in one browser, so clearing your data or switching phone loses them, and passwords cannot be reset. That is the price of having no server.</li>
+  <li>The slicer is rule-based, not a live AI, and the dashboard shows sample data until you have your own.</li>
+  <li>Helpline numbers and hours change, so they need checking with a university counselling service before any real rollout.</li>
+</ul>
+
+<h2>Try it</h2>
+<div class="card row">
+  <img class="qr" src="icons/qr.png" alt="QR code for the MindAnchor demo link">
+  <div><p>Open <a href="https://mindanchor-mu.vercel.app">mindanchor-mu.vercel.app</a> on your phone or computer, or scan the code. Install it from the Me tab and it works offline.</p>
+  <p><a class="btn" href="index.html">Open MindAnchor</a></p></div>
+</div>
+
+<h2>What's next</h2>
+<p>The next step is real user testing with students, a native Android build that can enforce caps, verified helplines agreed with a university counselling team, and a careful look at whether the features change habits over weeks, not minutes.</p>
+<p class="meta">MindAnchor is a university prototype. It supports wellbeing and is not therapy or medical advice. If you are struggling, please talk to someone you trust or use the Get Real Help button in the app.</p>
+</main>
+</body>
+</html>

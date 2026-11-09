@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindAnchor Evidence and Safety</title>
+<link rel="stylesheet" href="static.css">
+<link rel="icon" type="image/png" href="icons/favicon-32.png">
+</head>
+<body>
+<header class="bar"><b>⚓ MindAnchor</b><a href="index.html">Open the app</a><a href="guide.html">User guide</a><a class="on" href="evidence.html">Evidence &amp; safety</a><a href="blog.html">Blog</a></header>
+<main>
+<h1>Evidence and safety by design</h1>
+<p class="lead">Which feature answers which problem, and what the research does (and does not) say. Sources were checked online in November 2026. Where the evidence is thin we say so.</p>
+<p class="noprint"><button class="btn" onclick="window.print()">🖨 Print or save as PDF</button></p>
+
+<h2>A. Feature-to-evidence table</h2>
+<div class="tw"><table>
+<tr><th>Feature</th><th>Root cause it targets</th><th>Evidence</th><th>Strength and limits</th></tr>
+<tr><td><b>Overnight lockout</b> and emergency whitelist</td><td>Late-night phone use shortens and delays sleep, which hurts mood and study.</td><td>Hale &amp; Guan (2015) reviewed 67 studies: screen time was linked to worse sleep, mainly shorter and later sleep, in about 90% of them (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4437561">PMC4437561</a>). Student studies agree: bedtime device use and night-time phone checking predict poor sleep (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8466496/">Vietnam</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12130935/">Saudi Arabia</a>).</td><td><span class="tag">Moderate</span> Associations, not proof of cause. Mostly self-reported. Our lockout only governs MindAnchor itself.</td></tr>
+<tr><td><b>Time caps</b> and <b>Pause before you scroll</b></td><td>Automatic scroll loops and weak in-the-moment self-control.</td><td>Design basis: choice architecture and commitment, as described by Thaler &amp; Sunstein, <i>Nudge</i> (Yale University Press, 2008). Procrastination and impulsiveness are consistent predictors of self-regulation failure (Steel, 2007, below).</td><td><span class="tag">Conceptual</span> We did not find a study testing this exact feature, so treat it as a design rationale, not proven benefit.</td></tr>
+<tr><td><b>AI Micro-Task Slicer</b> and <b>15-minute focus sprints</b></td><td>Academic avoidance: tasks that feel aversive and too big.</td><td>Steel (2007) meta-analysis: task aversiveness, low self-efficacy and impulsiveness are strong, consistent predictors of procrastination (<a href="https://prism.ucalgary.ca/handle/1880/47914">paper</a>). Gollwitzer &amp; Sheeran (2006), 94 tests: specific "when and what" plans improved goal achievement (d = 0.65) (<a href="https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes">paper</a>).</td><td><span class="tag">Moderate</span> A later 2024 synthesis found smaller effects after bias correction (d about 0.15 to 0.35). The slicer is rule-based, not a live AI.</td></tr>
+<tr><td><b>Guided decompression player</b> (ambient, Punjabi rhythms, own songs, Spotify)</td><td>Study stress and fatigue, and the urge to switch off with short-form video.</td><td>de Witte et al. (2020): 104 randomised trials, 9,617 people. Music interventions reduced stress, with small-to-moderate effects (<a href="https://pubmed.ncbi.nlm.nih.gov/31167611/">PubMed</a>).</td><td><span class="tag">Moderate</span> The review covers music interventions in general. We found no study on Punjabi playlists specifically.</td></tr>
+<tr><td><b>Breathing reset</b> (box, long exhale) and 5-4-3-2-1 grounding</td><td>Acute stress and physical arousal.</td><td>Balban et al. (2023), a randomised trial: five minutes a day of structured breathing, especially cyclic sighing with long exhales, improved mood more than mindfulness meditation (<a href="https://pubmed.ncbi.nlm.nih.gov/36630953/">PubMed</a>). Box breathing was one of the tested methods.</td><td><span class="tag">Promising</span> One trial, authors call it "promising". Our long-exhale option is similar to, not identical with, cyclic sighing. The grounding exercise has no citation here.</td></tr>
+<tr><td><b>Get Real Help</b> button, local helplines, Quick Exit</td><td>Isolation, stigma and friction when in distress.</td><td>Gould et al. (2025): 437 suicidal callers to the US Lifeline were interviewed about two weeks later; nearly all said the call helped (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12099483">PMC12099483</a>).</td><td><span class="tag">Supportive</span> Caller self-reports from the US, not a controlled trial and not about Pakistan. Quick Exit is a safety design choice with no study cited.</td></tr>
+<tr><td><b>Mood check-in</b> with a gentle support prompt</td><td>Low self-awareness, and a high barrier to asking for help.</td><td>No study cited. This is a design rationale: a private, one-tap check-in that never scores or shames, and offers help after two low days.</td><td><span class="tag">No evidence claimed</span></td></tr>
+<tr><td><b>Skippable 20-second walkthrough</b></td><td>Confusion when first opening an app.</td><td>Nielsen Norman Group found app tutorials often do not improve task performance and recommends usable design instead (<a href="https://www.nngroup.com/articles/mobile-app-onboarding/">article</a>).</td><td><span class="tag">Honest trade-off</span> Because of this, our tour is short, skippable and can be replayed, and the screens are meant to be self-explanatory.</td></tr>
+</table></div>
+
+<h2>B. Coverage of the problems (not just screen time)</h2>
+<div class="tw"><table>
+<tr><th>Problem</th><th>How MindAnchor responds</th></tr>
+<tr><td>Digital overuse and doomscrolling</td><td>Time caps with a chosen app list, 20-second pause before scrolling, "time saved" feedback.</td></tr>
+<tr><td>Sleep loss and fatigue</td><td>Overnight lockout with an emergency whitelist, sleep timer and sleep sounds.</td></tr>
+<tr><td>Academic avoidance and burnout</td><td>Task slicer into four 15-minute steps, focus sprints, progress bars.</td></tr>
+<tr><td>Stress and overload</td><td>Ambient and Punjabi sound, own songs and Spotify, breathing, grounding.</td></tr>
+<tr><td>Isolation and acute crisis</td><td>Always-visible Get Real Help, Pakistan, US and personal helplines, supportive prompt after low check-ins.</td></tr>
+</table></div>
+
+<h2>C. Safety by design</h2>
+<div class="tw"><table>
+<tr><th>Requirement</th><th>What the app does</th></tr>
+<tr><td>No identifiable mental-health data without consent</td><td>Nickname only, no email, no real name. All data is in the browser. Mood check-ins are saved only after an explicit yes, can be turned off and deleted in Me, and the whole profile can be wiped. A downloadable copy is available.</td></tr>
+<tr><td>No monitoring by staff or parents</td><td>No server, no analytics, no admin view, no sharing feature. Only the person using the device can see anything.</td></tr>
+<tr><td>No shaming</td><td>No streaks, no red warnings, no missed-goal penalties. Messages celebrate "time saved" and small steps. A reached cap says "great boundary".</td></tr>
+<tr><td>A clear path to a real person</td><td>Get Real Help is on every screen. It shows local helplines, and Quick Exit (button or ESC) leaves instantly.</td></tr>
+</table></div>
+
+<h2>D. Honest limits</h2>
+<ul>
+  <li>MindAnchor is a prototype web app. It cannot read or block other apps on a phone. Real enforcement would need a native Android app with usage-access permission.</li>
+  <li>Accounts exist only in one browser. Clearing browser data or switching devices loses them, and passwords cannot be reset.</li>
+  <li>Dashboard figures are sample data until the user has real activity.</li>
+  <li>Spotify plays in Spotify's own player. Full tracks need the listener to be logged in to Spotify.</li>
+  <li>Helpline numbers and hours can change. Confirm them with your university counselling service before relying on them.</li>
+  <li>This app supports wellbeing. It is not therapy or medical advice.</li>
+</ul>
+<p class="meta">References: Balban et al. 2023, Cell Reports Medicine · de Witte et al. 2020, Health Psychology Review · Gollwitzer &amp; Sheeran 2006, Advances in Experimental Social Psychology · Gould et al. 2025, Suicide and Life-Threatening Behavior · Hale &amp; Guan 2015, Sleep Medicine Reviews · Steel 2007, Psychological Bulletin · Thaler &amp; Sunstein 2008, Nudge.</p>
+</main>
+</body>
+</html>
