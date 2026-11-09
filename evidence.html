@@ -10,51 +10,86 @@
 <header class="bar"><b>⚓ MindAnchor</b><a href="index.html">Open the app</a><a href="guide.html">User guide</a><a class="on" href="evidence.html">Evidence &amp; safety</a><a href="blog.html">Blog</a></header>
 <main>
 <h1>Evidence and safety by design</h1>
-<p class="lead">Which feature answers which problem, and what the research does (and does not) say. Sources were checked online in November 2026. Where the evidence is thin we say so.</p>
+<p class="lead">Every feature is traced to a ranked problem, a root cause from our 5 Whys, our own interview and survey data (8 interviews P1 to P8, 31 male student survey responses), and published research. Published sources were checked online; where evidence is indirect or missing, we say so.</p>
 <p class="noprint"><button class="btn" onclick="window.print()">🖨 Print or save as PDF</button></p>
+
+<div class="note"><b>Our ranked problems:</b> #1 short-form video doomscroll loop · #2 academic avoidance and procrastination · #3 late-night sleep loss · #4 counsellor hesitancy and stigma · #5 social comparison and academic FOMO · #6 physical co-isolation ("alone together").<br><b>Root causes (5 Whys):</b> an automatic phone reflex at night, infinite-scroll feeds with variable rewards, depleted self-control after long study hours, and no friction boundary between study and frictionless entertainment.</div>
 
 <h2>A. Feature-to-evidence table</h2>
 <div class="tw"><table>
-<tr><th>Feature</th><th>Root cause it targets</th><th>Evidence</th><th>Strength and limits</th></tr>
-<tr><td><b>Overnight lockout</b> and emergency whitelist</td><td>Late-night phone use shortens and delays sleep, which hurts mood and study.</td><td>Hale &amp; Guan (2015) reviewed 67 studies: screen time was linked to worse sleep, mainly shorter and later sleep, in about 90% of them (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4437561">PMC4437561</a>). Student studies agree: bedtime device use and night-time phone checking predict poor sleep (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8466496/">Vietnam</a>, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12130935/">Saudi Arabia</a>).</td><td><span class="tag">Moderate</span> Associations, not proof of cause. Mostly self-reported. Our lockout only governs MindAnchor itself.</td></tr>
-<tr><td><b>Time caps</b> and <b>Pause before you scroll</b></td><td>Automatic scroll loops and weak in-the-moment self-control.</td><td>Design basis: choice architecture and commitment, as described by Thaler &amp; Sunstein, <i>Nudge</i> (Yale University Press, 2008). Procrastination and impulsiveness are consistent predictors of self-regulation failure (Steel, 2007, below).</td><td><span class="tag">Conceptual</span> We did not find a study testing this exact feature, so treat it as a design rationale, not proven benefit.</td></tr>
-<tr><td><b>AI Micro-Task Slicer</b> and <b>15-minute focus sprints</b></td><td>Academic avoidance: tasks that feel aversive and too big.</td><td>Steel (2007) meta-analysis: task aversiveness, low self-efficacy and impulsiveness are strong, consistent predictors of procrastination (<a href="https://prism.ucalgary.ca/handle/1880/47914">paper</a>). Gollwitzer &amp; Sheeran (2006), 94 tests: specific "when and what" plans improved goal achievement (d = 0.65) (<a href="https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes">paper</a>).</td><td><span class="tag">Moderate</span> A later 2024 synthesis found smaller effects after bias correction (d about 0.15 to 0.35). The slicer is rule-based, not a live AI.</td></tr>
-<tr><td><b>Guided decompression player</b> (ambient, Punjabi rhythms, own songs, Spotify)</td><td>Study stress and fatigue, and the urge to switch off with short-form video.</td><td>de Witte et al. (2020): 104 randomised trials, 9,617 people. Music interventions reduced stress, with small-to-moderate effects (<a href="https://pubmed.ncbi.nlm.nih.gov/31167611/">PubMed</a>).</td><td><span class="tag">Moderate</span> The review covers music interventions in general. We found no study on Punjabi playlists specifically.</td></tr>
-<tr><td><b>Breathing reset</b> (box, long exhale) and 5-4-3-2-1 grounding</td><td>Acute stress and physical arousal.</td><td>Balban et al. (2023), a randomised trial: five minutes a day of structured breathing, especially cyclic sighing with long exhales, improved mood more than mindfulness meditation (<a href="https://pubmed.ncbi.nlm.nih.gov/36630953/">PubMed</a>). Box breathing was one of the tested methods.</td><td><span class="tag">Promising</span> One trial, authors call it "promising". Our long-exhale option is similar to, not identical with, cyclic sighing. The grounding exercise has no citation here.</td></tr>
-<tr><td><b>Get Real Help</b> button, local helplines, Quick Exit</td><td>Isolation, stigma and friction when in distress.</td><td>Gould et al. (2025): 437 suicidal callers to the US Lifeline were interviewed about two weeks later; nearly all said the call helped (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12099483">PMC12099483</a>).</td><td><span class="tag">Supportive</span> Caller self-reports from the US, not a controlled trial and not about Pakistan. Quick Exit is a safety design choice with no study cited.</td></tr>
-<tr><td><b>Mood check-in</b> with a gentle support prompt</td><td>Low self-awareness, and a high barrier to asking for help.</td><td>No study cited. This is a design rationale: a private, one-tap check-in that never scores or shames, and offers help after two low days.</td><td><span class="tag">No evidence claimed</span></td></tr>
-<tr><td><b>Skippable 20-second walkthrough</b></td><td>Confusion when first opening an app.</td><td>Nielsen Norman Group found app tutorials often do not improve task performance and recommends usable design instead (<a href="https://www.nngroup.com/articles/mobile-app-onboarding/">article</a>).</td><td><span class="tag">Honest trade-off</span> Because of this, our tour is short, skippable and can be replayed, and the screens are meant to be self-explanatory.</td></tr>
+<tr><th>Feature</th><th>Problem and root cause</th><th>Our primary evidence</th><th>Published evidence</th><th>Strength and limits</th></tr>
+
+<tr><td><b>Time caps</b> (self-set, can only go lower that day)</td><td>#1 and #2. Feeds with no stop signal, and willpower depleted when it matters.</td><td>7 of 8 interviews describe unplanned scrolling. 61.3% say short-form video is their main app category. P5 overrides his own timers; P4 asked for a lock that cannot be overridden. 6 of 6 testers agreed with un-bypassable caps.</td><td>TikTok self-control failure is linked to bedtime procrastination in adolescents and university students (Miedzobrodzka et al., 2024). Phone addiction and bedtime procrastination predict each other over time (Lin et al., 2025). Choice architecture: Thaler &amp; Sunstein (2008).</td><td><span class="tag">Moderate</span> Associations, not proof. <b>Tension:</b> 48.4% would uninstall an app that feels "preachy, restrictive or lock-me-out aggressive", so caps are self-set, kindly worded and logged, not imposed.</td></tr>
+
+<tr><td><b>Pause before you scroll</b> (20 seconds)</td><td>#1. The automatic reflex: opening the phone for a quick check.</td><td>P1 opens his phone for an alarm and gets trapped; P4 and P8 describe "five minutes" becoming an hour. Answers HMW 1.</td><td>Same self-control evidence as above.</td><td><span class="tag">Conceptual</span> No study of this exact friction. A design response to the interview pattern.</td></tr>
+
+<tr><td><b>Overnight lockout</b> and emergency whitelist</td><td>#3. Night scrolling at peak fatigue, no friction layer.</td><td>51.6% stay up past their intended time 3 or more nights a week; 41.9% rate the morning effect 4 or 5 out of 5. P1, P3, P4, P8 report sleep loss. 1 of 6 testers feared missing family calls, so we added the whitelist.</td><td>Screen time is linked to shorter, later sleep in about 90% of reviewed studies (Hale &amp; Guan, 2015). In 45,202 Norwegian students, screen time in bed was linked to more insomnia symptoms and less sleep (Hjetland et al., 2025).</td><td><span class="tag">Moderate</span> Cross-sectional associations. Our lockout governs MindAnchor only, because a web page cannot block other apps. Lockout starts off so it is the student's choice.</td></tr>
+
+<tr><td><b>Task slicer</b> and 15-minute focus sprints</td><td>#2. Tasks feel large and aversive, so students escape into feeds.</td><td>77.4% scroll to avoid coursework often or always. P8: "100% procrastination". 6 of 6 testers agreed the slicer would reduce avoidance.</td><td>Task aversiveness, low self-efficacy and impulsiveness consistently predict procrastination (Steel, 2007). Specific if-then plans help goal achievement (Gollwitzer &amp; Sheeran, 2006), though later work finds smaller effects.</td><td><span class="tag">Moderate</span> The slicer is rule-based, not a live AI.</td></tr>
+
+<tr><td><b>Calm player</b> (ambient, Punjabi rhythms, own songs, Spotify)</td><td>#1 and #3. Replace hollow escape with real recovery. Answers HMW 2.</td><td>54.8% cope by isolating with games or scrolling. 3 of 6 testers wanted normal desi Punjabi music, so we added it, plus their own songs and Spotify.</td><td>Music interventions reduce stress (de Witte et al., 2020; 104 randomised trials).</td><td><span class="tag">Moderate</span> General music evidence; none specific to Punjabi playlists.</td></tr>
+
+<tr><td><b>Breathing reset</b> and grounding</td><td>#3 and stress. A racing mind at night.</td><td>P4: videos keep playing in his mind and he cannot sleep.</td><td>Structured breathing improved mood more than mindfulness in a randomised trial; box breathing was one tested method (Balban et al., 2023).</td><td><span class="tag">Promising</span> One trial. Our long-exhale option resembles, but is not identical to, cyclic sighing. Grounding has no citation.</td></tr>
+
+<tr><td><b>Private mood check-in</b>, consent, local-only data, Get Real Help</td><td>#4. Stigma and fear of surveillance stop students asking for help.</td><td>83.9% are hesitant or uncomfortable about a campus counsellor; 45.2% prefer an anonymous self-help or peer path; 22.6% would uninstall an app that shared data with parents or staff.</td><td>In Lahore university students, distress and stigma explained 38% of help-seeking (Ahmad et al., 2026). Stigma and cost are barriers in Bangladesh (Azdi et al., 2025). Crisis-line callers reported the call helped (Gould et al., 2025, US).</td><td><span class="tag">Supportive</span> Regional studies differ from our sample. The mood check-in itself has no study behind it.</td></tr>
+
+<tr><td><b>Compared-myself check-in</b> (breathe, pause, name a win)</td><td>#5. Constant exposure to peers' success feeds feelings of inferiority.</td><td>38.7% feel stressed or inadequate after peers' posts frequently or almost constantly; 22.6% want a tool to solve this first. P4 and P8 report feeling behind (P1 and P2 describe it as motivating).</td><td>No direct study found for this feature.</td><td><span class="tag">No evidence claimed</span> A light, optional prompt, not a treatment.</td></tr>
+
+<tr><td><b>Phones-down hangout</b> (30, 60 or 90 minutes)</td><td>#6. People together but each on a phone.</td><td>90.3% say friends look at phones instead of talking sometimes or always; P8 describes friends sitting together, each on their own phone. 12.9% want a tool for face-to-face time. P3 notes friends tease phone use, so norms already help.</td><td>Indirect only. A study of 8 UK students living alone found technology-mediated connection protective (Groarke et al., 2024).</td><td><span class="tag">Weak</span> We found no study of phones-down hangouts. Derived from Idea 12 without the gamification.</td></tr>
+
+<tr><td><b>Short skippable walkthrough</b></td><td>First-use confusion.</td><td>Not in our data.</td><td>Nielsen Norman Group: tutorials often do not improve task performance.</td><td><span class="tag">Honest trade-off</span> So it is about 20 seconds and skippable.</td></tr>
 </table></div>
 
-<h2>B. Coverage of the problems (not just screen time)</h2>
+<h2>B. Coverage of our ranked problems</h2>
 <div class="tw"><table>
-<tr><th>Problem</th><th>How MindAnchor responds</th></tr>
-<tr><td>Digital overuse and doomscrolling</td><td>Time caps with a chosen app list, 20-second pause before scrolling, "time saved" feedback.</td></tr>
-<tr><td>Sleep loss and fatigue</td><td>Overnight lockout with an emergency whitelist, sleep timer and sleep sounds.</td></tr>
-<tr><td>Academic avoidance and burnout</td><td>Task slicer into four 15-minute steps, focus sprints, progress bars.</td></tr>
-<tr><td>Stress and overload</td><td>Ambient and Punjabi sound, own songs and Spotify, breathing, grounding.</td></tr>
-<tr><td>Isolation and acute crisis</td><td>Always-visible Get Real Help, Pakistan, US and personal helplines, supportive prompt after low check-ins.</td></tr>
+<tr><th>Rank</th><th>Problem</th><th>Features</th><th>Coverage</th></tr>
+<tr><td>#1</td><td>Short-form doomscroll loop</td><td>Time caps, pause before scrolling, overnight lockout, calm player</td><td>Strong</td></tr>
+<tr><td>#2</td><td>Academic avoidance</td><td>Task slicer, focus sprints, caps</td><td>Strong</td></tr>
+<tr><td>#3</td><td>Late-night sleep loss</td><td>Lockout, sleep timer, sleep sounds, breathing</td><td>Strong</td></tr>
+<tr><td>#4</td><td>Counsellor hesitancy and stigma</td><td>Private local-only check-in, anonymous use, Get Real Help with local helplines</td><td>Partial. We offer a private first step, but no counsellor link yet.</td></tr>
+<tr><td>#5</td><td>Social comparison</td><td>Compared-myself check-in</td><td>Light</td></tr>
+<tr><td>#6</td><td>Physical co-isolation</td><td>Phones-down hangout</td><td>Light</td></tr>
+<tr><td>Unranked</td><td>Digital harassment (35.5% had witnessed it)</td><td>Signpost to FIA Cyber Crime 1991 in Get Real Help</td><td>Signpost only</td></tr>
 </table></div>
 
 <h2>C. Safety by design</h2>
 <div class="tw"><table>
 <tr><th>Requirement</th><th>What the app does</th></tr>
-<tr><td>No identifiable mental-health data without consent</td><td>Nickname only, no email, no real name. All data is in the browser. Mood check-ins are saved only after an explicit yes, can be turned off and deleted in Me, and the whole profile can be wiped. A downloadable copy is available.</td></tr>
-<tr><td>No monitoring by staff or parents</td><td>No server, no analytics, no admin view, no sharing feature. Only the person using the device can see anything.</td></tr>
-<tr><td>No shaming</td><td>No streaks, no red warnings, no missed-goal penalties. Messages celebrate "time saved" and small steps. A reached cap says "great boundary".</td></tr>
-<tr><td>A clear path to a real person</td><td>Get Real Help is on every screen. It shows local helplines, and Quick Exit (button or ESC) leaves instantly.</td></tr>
+<tr><td>No identifiable mental-health data without consent</td><td>Nickname only, no email or real name. All data stays in the browser. Mood check-ins are saved only after an explicit yes, can be turned off and deleted in Me, and the whole profile can be wiped. A copy can be downloaded.</td></tr>
+<tr><td>No monitoring by staff or parents</td><td>No server, analytics, admin view or sharing feature. Our own survey says 22.6% would uninstall an app that shared data, and Idea 1 (parent-gated access) was cut for this reason.</td></tr>
+<tr><td>No shaming</td><td>No streaks, red warnings or penalties. "Time saved" and small wins. A reached cap says "great boundary".</td></tr>
+<tr><td>A clear path to a real person</td><td>Get Real Help on every screen with Pakistan helplines, Quick Exit (button or ESC), and Rest-mode access to help.</td></tr>
 </table></div>
 
 <h2>D. Honest limits</h2>
 <ul>
-  <li>MindAnchor is a prototype web app. It cannot read or block other apps on a phone. Real enforcement would need a native Android app with usage-access permission.</li>
-  <li>Accounts exist only in one browser. Clearing browser data or switching devices loses them, and passwords cannot be reset.</li>
-  <li>Dashboard figures are sample data until the user has real activity.</li>
-  <li>Spotify plays in Spotify's own player. Full tracks need the listener to be logged in to Spotify.</li>
-  <li>Helpline numbers and hours can change. Confirm them with your university counselling service before relying on them.</li>
-  <li>This app supports wellbeing. It is not therapy or medical advice.</li>
+  <li>Prototype web app. It cannot read or block other apps on a phone. Real enforcement needs a native Android app.</li>
+  <li><b>Anonymous peer circles (Idea 10) were deferred:</b> they need a server and moderation, which would break our local-only privacy rule and create safety risks. This is a deliberate cut, not an oversight.</li>
+  <li>Our evidence comes from 8 interviews (convenience sample, home settings) and 31 survey responses, mostly first-year male students living at home. It cannot be generalised.</li>
+  <li>Screen time was self-reported. Research finds self-reports rarely match logged use (Parry et al., 2021).</li>
+  <li>Accounts exist only in one browser, and passwords cannot be reset. Dashboard figures are sample data until real use.</li>
+  <li>Helpline numbers and hours change. Confirm them with the university counselling service.</li>
+  <li>This app supports wellbeing and is not therapy or medical advice.</li>
 </ul>
-<p class="meta">References: Balban et al. 2023, Cell Reports Medicine · de Witte et al. 2020, Health Psychology Review · Gollwitzer &amp; Sheeran 2006, Advances in Experimental Social Psychology · Gould et al. 2025, Suicide and Life-Threatening Behavior · Hale &amp; Guan 2015, Sleep Medicine Reviews · Steel 2007, Psychological Bulletin · Thaler &amp; Sunstein 2008, Nudge.</p>
+
+<h2>References (checked online, November 2026)</h2>
+<ul class="meta">
+  <li>Ahmad, Tasheeh &amp; Rameesha (2026). Psychological distress, mental health stigma and help seeking behavior in university students. <i>Pakistan Journal of Professional Psychology: Research and Practice, 17</i>(1). <a href="https://pjpprp.pu.edu.pk/jour/pjpprp/article/view/295">link</a></li>
+  <li>Azdi et al. (2025). Gender differences in mental health help-seeking behaviour in Bangladesh: findings from a cross-sectional online survey. <i>BMJ Open, 15</i>(5), e091933.</li>
+  <li>Balban et al. (2023). Brief structured respiration practices enhance mood and reduce physiological arousal. <i>Cell Reports Medicine, 4</i>. <a href="https://pubmed.ncbi.nlm.nih.gov/36630953/">PubMed</a></li>
+  <li>de Witte et al. (2020). Effects of music interventions on stress-related outcomes. <i>Health Psychology Review, 14</i>(2), 294–324. <a href="https://pubmed.ncbi.nlm.nih.gov/31167611/">PubMed</a></li>
+  <li>Gollwitzer &amp; Sheeran (2006). Implementation intentions and goal achievement. <i>Advances in Experimental Social Psychology, 38</i>, 69–119.</li>
+  <li>Gould et al. (2025). Study of National Suicide Prevention Lifeline (988) callers. <i>Suicide and Life-Threatening Behavior</i>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12099483">PMC12099483</a></li>
+  <li>Groarke, McKeown, McKenna-Plumley &amp; Graham-Wisener (2024). "Oh my God I am alone": young adult students' experiences of living alone. <i>International Journal of Adolescence and Youth, 29</i>(1). doi:10.1080/02673843.2023.2298082</li>
+  <li>Hale &amp; Guan (2015). Screen time and sleep among school-aged children and adolescents. <i>Sleep Medicine Reviews, 21</i>, 50–58. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4437561">PMC4437561</a></li>
+  <li>Hjetland et al. (2025). How and when screens are used: comparing different screen activities and sleep in Norwegian university students. <i>Frontiers in Psychiatry</i>. doi:10.3389/fpsyt.2025.1548273</li>
+  <li>Lin et al. (2025). Cross-lagged analysis of mobile phone addiction and bedtime procrastination. <i>Frontiers in Psychology, 16</i>. doi:10.3389/fpsyg.2025.1588090</li>
+  <li>Miedzobrodzka, Du &amp; van Koningsbruggen (2024). TikTok use versus TikTok self-control failure. <i>Acta Psychologica, 251</i>, 104565. doi:10.1016/j.actpsy.2024.104565</li>
+  <li>Nielsen Norman Group. Mobile-app onboarding. <a href="https://www.nngroup.com/articles/mobile-app-onboarding/">article</a></li>
+  <li>Parry et al. (2021). A systematic review and meta-analysis of discrepancies between logged and self-reported digital media use. <i>Nature Human Behaviour, 5</i>(11), 1535–1547. doi:10.1038/s41562-021-01117-5</li>
+  <li>Steel (2007). The nature of procrastination. <i>Psychological Bulletin, 133</i>(1), 65–94. doi:10.1037/0033-2909.133.1.65</li>
+  <li>Thaler &amp; Sunstein (2008). <i>Nudge</i>. Yale University Press.</li>
+</ul>
 </main>
 </body>
 </html>

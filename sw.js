@@ -1,5 +1,5 @@
 /* MindAnchor service worker: makes the app work offline. Bump VERSION to force an update. */
-const VERSION = 'mindanchor-v3';
+const VERSION = 'mindanchor-v4';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png', './icons/qr.png', './guide.html', './evidence.html', './blog.html', './static.css'];
 
 self.addEventListener('install', e => {
