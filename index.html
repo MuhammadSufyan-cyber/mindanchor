@@ -47,7 +47,8 @@ input[type=checkbox]{accent-color:var(--t);width:18px;height:18px}
 .logo{width:36px;height:36px;border-radius:11px;background:var(--t);display:grid;place-items:center}
 .nav{display:flex;flex-direction:column;gap:4px;flex:1}
 .nav button{display:flex;gap:12px;align-items:center;padding:11px 12px;border-radius:12px;color:#cbd5e1;font-weight:500;text-align:left}
-.nav button:hover{background:#1e293b;color:#fff}.nav button.on{background:var(--t);color:#fff}
+.nav a{display:flex;gap:12px;align-items:center;padding:11px 12px;border-radius:12px;color:#cbd5e1;font-weight:500;text-decoration:none}
+.nav a:hover,.nav button:hover{background:#1e293b;color:#fff}.nav button.on{background:var(--t);color:#fff}
 .safety{background:#0f2f2e;border:1px solid #115e59;border-radius:12px;padding:10px 12px;font-size:.78rem;color:#d1fae5}
 .safety b{display:block;margin-bottom:3px}
 .safety span{display:block;min-height:2.6em;transition:opacity .4s}
@@ -240,6 +241,9 @@ label.sw{display:flex;gap:10px;align-items:center;cursor:pointer}
       <button data-go="calm">🎧 Calm</button>
       <button data-go="guard">🛡 Guard</button>
       <button data-go="me">👤 Me &amp; Privacy</button>
+      <a href="blog.html" target="_blank" rel="noopener">📝 Blog</a>
+      <a href="guide.html" target="_blank" rel="noopener">📖 User guide</a>
+      <a href="evidence.html" target="_blank" rel="noopener">🔬 Evidence &amp; safety</a>
     </nav>
     <div class="safety" role="note"><b>🛡 Privacy Guarantee</b><span class="safeMsg"></span></div>
   </aside>
@@ -271,6 +275,8 @@ label.sw{display:flex;gap:10px;align-items:center;cursor:pointer}
               <h3 style="margin-top:18px;font-size:.92rem">Daily focus minutes</h3><div class="bars" id="bars" style="margin-top:8px"></div></div>
           </div>
         </div>
+        <div class="card" style="margin-top:18px"><h3>Learn more</h3><p class="sub" style="margin-bottom:10px">How MindAnchor works and why we built it.</p>
+          <div class="row"><a class="btn p" href="blog.html" target="_blank" rel="noopener">📝 Read the blog</a><a class="btn" href="guide.html" target="_blank" rel="noopener">📖 User guide</a><a class="btn" href="evidence.html" target="_blank" rel="noopener">🔬 Evidence &amp; safety</a></div></div>
       </section>
 
       <!-- FOCUS -->
