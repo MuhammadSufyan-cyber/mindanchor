@@ -1,0 +1,22 @@
+{
+  "name": "MindAnchor",
+  "short_name": "MindAnchor",
+  "description": "A private, calming space for students: focus sprints, task slicing, overnight rest, time caps and real help in one tap.",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0d9488",
+  "categories": ["health", "education", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Focus sprint", "url": "./index.html?go=focus", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Calm", "url": "./index.html?go=calm", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
